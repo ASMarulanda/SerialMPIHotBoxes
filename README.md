@@ -41,7 +41,8 @@ $C_v=\frac{\left\langle E^2\right\rangle - \langle E\rangle^2}{k_b T^2}$.
 
 This initial version of the code operates sequentially, simulating the behavior of the system at each temperature one after the other. Here, the code is run four times. 
 
-![teandtemp](https://github.com/ASMarulanda/SerialMPIHotBoxes/assets/123122569/5f506694-4812-4f0b-b720-7f3e0e36ec21)
+<img src="https://github.com/ASMarulanda/SerialMPIHotBoxes/assets/123122569/5f506694-4812-4f0b-b720-7f3e0e36ec21" width="400">
+
 
 This graph depicts the total average energy of the system at equilibrium with the temperature of the thermal bath for four separate simulation runs.
 
