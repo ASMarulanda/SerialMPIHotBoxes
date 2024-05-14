@@ -46,13 +46,13 @@ This initial version of the code operates sequentially, simulating the behavior 
 
 This graph depicts the total average energy of the system at equilibrium with the temperature of the thermal bath for four separate simulation runs.
 
-![cvandtemp](https://github.com/ASMarulanda/SerialMPIHotBoxes/assets/123122569/dea1e137-386a-4794-a70b-bbed11ecbd98)
+<img src="https://github.com/ASMarulanda/SerialMPIHotBoxes/assets/123122569/dea1e137-386a-4794-a70b-bbed11ecbd98" width="400">
 
 This visualization illustrates the heat capacity of the system at equilibrium for the temperature of the thermal bath for four distinct simulation runs. 
 
-The magic command %%time provides essential metrics for evaluating code performance. User Time reflects the total CPU time dedicated to executing user instructions, encompassing the code and function calls. System Time quantifies CPU time allocated to executing system-related tasks, such as handling inputs/outputs. Total Time aggregates User Time and System Time, offering a comprehensive measure of overall CPU time consumption. Wall Time represents the actual elapsed time from the start to the end of script execution, including waiting periods for resources and libraries.
+The magic command %%time provides essential metrics for evaluating code performance. User Time reflects the total CPU time dedicated to executing user instructions, encompassing the code and function calls. System Time quantifies CPU time allocated to executing system-related tasks, such as handling inputs/outputs. Total Time aggregates User Time and System Time, offering a comprehensive measure of overall CPU time consumption. Wall Time represents the actual elapsed time from the start to the end of script execution, including waiting periods for resources and libraries. 
 
-![serialtimes](https://github.com/ASMarulanda/SerialMPIHotBoxes/assets/123122569/4c893418-8fa7-403c-a790-905994ce9f32)
+<img src="https://github.com/ASMarulanda/SerialMPIHotBoxes/assets/123122569/4c893418-8fa7-403c-a790-905994ce9f32" width="400">
 
 
 #  Paralell Approach 
@@ -63,10 +63,8 @@ The code utilizes MPI's distributed computing approach to distribute simulation 
 On a cluster with 8 CPUs, each managing 4 simulation runs, the total computing time was notably reduced. Remarkably, results from parallel computation closely matched those from serial computation, accompanied by error bars.
 
 ### Paralell Approach Results - Graphics
+<img src="https://github.com/ASMarulanda/SerialMPIHotBoxes/assets/123122569/6123cd9e-d820-436f-8d5f-8e6b438df760" width="400">
 
-
-![paral-energytemp](https://github.com/ASMarulanda/SerialMPIHotBoxes/assets/123122569/6123cd9e-d820-436f-8d5f-8e6b438df760)
-
-![paralel-CVANDTEMP](https://github.com/ASMarulanda/SerialMPIHotBoxes/assets/123122569/6ef9d168-7cca-464c-aa28-9104ff5428de)
+<img src="https://github.com/ASMarulanda/SerialMPIHotBoxes/assets/123122569/6ef9d168-7cca-464c-aa28-9104ff5428de" width="400">
 
 The linear progression of total energy with increasing temperature aligns with theoretical expectations, indicating the system's sensitivity to temperature variations. Additionally, the smooth curve observed in the heat capacity graph presents an averaged fit capturing the response of system particles to energy transitions between levels. This representation offers deeper insight into the system's dynamic behavior under varying temperature conditions, confirming the accuracy and reliability of the parallel simulation.
