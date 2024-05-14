@@ -37,7 +37,7 @@ The heat capacity (Cv) of the system can be calculated from its energy behavior 
 $C_v=\frac{\left\langle E^2\right\rangle - \langle E\rangle^2}{k_b T^2}$.
 
 
-### Seriall Approach Results - Graphics
+### Serial Results - Graphics
 
 This initial version of the code operates sequentially, simulating the behavior of the system at each temperature one after the other. Here, the code is run four times. 
 
@@ -62,9 +62,10 @@ The code utilizes MPI's distributed computing approach to distribute simulation 
 
 On a cluster with 8 CPUs, each managing 4 simulation runs, the total computing time was notably reduced. Remarkably, results from parallel computation closely matched those from serial computation, accompanied by error bars.
 
-### Paralell Approach Results - Graphics
+### Paralell Results - Graphics
 <img src="https://github.com/ASMarulanda/SerialMPIHotBoxes/assets/123122569/6123cd9e-d820-436f-8d5f-8e6b438df760" width="400">
+
+The linear progression of total energy with increasing temperature aligns with theoretical expectations, indicating the system's sensitivity to temperature variations. Additionally, the smooth curve observed in the heat capacity graph presents an averaged fit capturing the response of system particles to energy transitions between levels. This representation offers deeper insight into the system's dynamic behavior under varying temperature conditions, confirming the accuracy and reliability of the parallel simulation.
 
 <img src="https://github.com/ASMarulanda/SerialMPIHotBoxes/assets/123122569/6ef9d168-7cca-464c-aa28-9104ff5428de" width="400">
 
-The linear progression of total energy with increasing temperature aligns with theoretical expectations, indicating the system's sensitivity to temperature variations. Additionally, the smooth curve observed in the heat capacity graph presents an averaged fit capturing the response of system particles to energy transitions between levels. This representation offers deeper insight into the system's dynamic behavior under varying temperature conditions, confirming the accuracy and reliability of the parallel simulation.
