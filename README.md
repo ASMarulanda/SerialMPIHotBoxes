@@ -39,6 +39,9 @@ $C_v=\frac{\left\langle E^2\right\rangle - \langle E\rangle^2}{k_b T^2}$.
 
 ### Seriall Approach Results - Graphics
 
+This initial version of the code operates sequentially, simulating the behavior of the system at each temperature one after the other. 
+
+
 ![00SERIALRESULTS](https://github.com/ASMarulanda/SerialMPIHotBoxes/assets/123122569/7c87ce1e-0009-42b5-b408-3cda69b97bb2)
 
 
