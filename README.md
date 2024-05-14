@@ -69,3 +69,16 @@ The linear progression of total energy with increasing temperature aligns with t
 
 <img src="https://github.com/ASMarulanda/SerialMPIHotBoxes/assets/123122569/6ef9d168-7cca-464c-aa28-9104ff5428de" width="400">
 
+
+### Error Analysis 
+In the results, the error must be accounted for. Each data point on the graphs is accompanied by an associated error bar, representing the standard deviation calculated from the resulting values obtained on each processor for the multiple simulations.
+
+<img src="https://github.com/ASMarulanda/SerialMPIHotBoxes/assets/123122569/ef447af3-bf54-4b95-9d07-41d0eb982e49" width="400">
+
+The observed error in the heat capacity shows a noticeable upward trend with increasing temperature. This trend can be primarily attributed to the stochastic nature of the computed values, leading to greater uncertainty in the heat capacity estimation, especially at higher temperatures.
+
+<img src="https://github.com/ASMarulanda/SerialMPIHotBoxes/assets/123122569/e0632778-fbb1-469d-b6fc-220e99a64ce7" width="400">
+
+On this result, the error demonstrates a linear increase with temperature. Despite this, the error propagation remains relatively minimal compared to the uncertainty in heat capacity, particularly at high temperatures. This indicates that the total energy measurements provide highly reliable outcomes, with the averaging across multiple calculations facilitating precise forecasts of the system's dynamics.
+
+
