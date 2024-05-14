@@ -29,16 +29,32 @@ Potential_reservoir(Ta, N, l, nmax, plot=False, live=False)
         live (bool): Whether to generate an animation of the distribution of energy states. Default: False
 
     Returns:
-        Tuple: Array or integer representing the average energy. The format of the tuple varies depending on the type of the Ta parameter: if Ta is an integer, both average energy and heat capacity are single values; if Ta is a list, each element of the tuple corresponds to an array of values, and similarly for the l parameter.
+        Tuple: Array or integer representing the average energy. The format of the tuple varies depending on          the type of the Ta parameter: if Ta is an integer, both average energy and heat capacity are single           values; if Ta is a list, each element of the tuple corresponds to an array of values, and                     similarly for the l parameter.
     
-
-This is the main function for the user, from it the user can obtain how is the behaviour of the system energy respect to the different parameters.
-
-
-### Heat Capacity 
+This is the main function for the user, from it the code results display how is the behavior of the system energy concerning the different parameters.
+In this case, both plot and live options for the Potential_reservoir function are disabled since we are not interested in the plot and animation of the results. 
+In order to specify the desired system parameters (such as initial reservoir temperature T, number of wells N and well size l), the function Pot_energy is defined to call the Potential_reservoir function with input parameters. 
 The heat capacity of a system can be computed from its energy behavior when it is in thermal equilibrium, where $k_b$ is the Boltzmann constant, as:
 
 $C_v=\frac{\left\langle E^2\right\rangle - \langle E\rangle^2}{k_b T^2}$.
+
+def Pot_energy(T, N, l, nmax, plot = False, live = False):
+    """
+    Perform a simulation to compute the potential energy of a system of infinite potential wells.
+
+    Parameters:
+        T (float): Temperature of the system.
+        N (int): Number of potential wells in the system.
+        l (float): Length of the wells.
+        nmax (int): Maximum level of occupancy for a well.
+        plot (bool): Whether to generate a plot of the simulation results.
+        live (bool): Whether to generate an animation of the distribution of energy states.
+
+    Returns:
+        tuple: A tuple containing the average energy and the heat capacity.
+    """
+    
+
 
 ### Seriall Approach Results - Graphics
 
