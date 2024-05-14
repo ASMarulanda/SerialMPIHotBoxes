@@ -1,16 +1,15 @@
 # Monte Carlo Simulation of Particle Distribution in Potential Wells with Thermal Reservoir
 
-We present the adaptation of a Monte Carlo-based simulation for obtaining the energy distribution of particles within an array of potential wells in contact with a thermal reservoir. 
-The main objective of this project is to investigate the efficiency of the simulation when executed using both single-processor serial and parallel processing via SSH cluster connection. By dividing the algorithm into parallelized tasks, we explore the benefits of parallel computing, focusing on computational time and resource utilization.  The final results use simultaneous runs to display average energy behavior according to temperature increase, the same as the system's heat capacity.
+We introduce a Monte Carlo-based simulation for analyzing the energy distribution of particles within an array of potential wells coupled with a thermal reservoir. The primary objective of this project is to assess the simulation's efficiency through both single-processor serial and parallel processing via SSH cluster connection. By parallelizing the algorithm, we aim to explore the advantages of parallel computing, particularly focusing on computational time and resource utilization. The final results encompass simultaneous runs illustrating the average energy behavior with increasing temperature, resembling the system's heat capacity results as well. 
 
 <img src="https://github.com/ASMarulanda/SerialMPIHotBoxes/assets/123122569/6417c58f-6d63-45cb-9f46-21eb815a68d7" width="400">
 
-
-Traditionally, programming favored serial computation, where problems are tackled sequentially on a single processor. However, with growing computing demands, parallel computing has become crucial. It utilizes multiple processors to solve problems concurrently, dividing tasks into manageable parts executed simultaneously. This approach enhances performance and reduces execution time for large-scale computations. Effective coordination mechanisms ensure seamless collaboration among processors, optimizing overall efficiency.
+In traditional programming, serial computation sequentially tackles problems on a single processor. However, with escalating computing demands, parallel computing has become indispensable. Utilizing multiple processors concurrently divides tasks into manageable parts, enhancing performance and reducing execution time for large-scale computations. Effective coordination mechanisms ensure seamless collaboration among processors, optimizing overall efficiency.
 
 ###  Monte Carlo-Metropolis Simulation 
 
-Monte Carlo simulations employ randomness and probabilistic sampling to tackle problems where deterministic solutions are challenging to obtain. A notable example is the Metropolis algorithm, widely utilized in statistical physics. This algorithm generates energy values consistent with a Maxwell-Boltzmann distribution to derive expected values for observables. It employs Markov Chain Monte Carlo (MCMC) at its core, exploring a system's phase space and sampling configurations based on their Boltzmann weights. By sequentially proposing changes and accepting or rejecting them probabilistically, MCMC ensures equilibrium is reached and samples configurations according to their equilibrium probabilities, adhering to detailed balance conditions. The likelihood of being in a particular state is determined by the system's energy and temperature.
+Monte Carlo simulations employ randomness and probabilistic sampling to address problems with challenging deterministic solutions. The Metropolis algorithm, a prominent example, generates energy values consistent with a Maxwell-Boltzmann distribution, deriving expected values for observables. Employing Markov Chain Monte Carlo (MCMC), the algorithm explores a system's phase space, sampling configurations based on their Boltzmann weights. MCMC ensures equilibrium is reached, adhering to detailed balance conditions, and sample configurations according to their equilibrium probabilities, dependent on the system's energy and temperature.
+
 
 #  Serial Approach 
 
@@ -31,29 +30,11 @@ Potential_reservoir(Ta, N, l, nmax, plot=False, live=False)
     Returns:
         Tuple: Array or integer representing the average energy. The format of the tuple varies depending on          the type of the Ta parameter: if Ta is an integer, both average energy and heat capacity are single           values; if Ta is a list, each element of the tuple corresponds to an array of values, and                     similarly for the l parameter.
     
-This is the main function for the user, from it the code results display how is the behavior of the system energy concerning the different parameters.
-In this case, both plot and live options for the Potential_reservoir function are disabled since we are not interested in the plot and animation of the results. 
-In order to specify the desired system parameters (such as initial reservoir temperature T, number of wells N and well size l), the function Pot_energy is defined to call the Potential_reservoir function with input parameters. 
-The heat capacity of a system can be computed from its energy behavior when it is in thermal equilibrium, where $k_b$ is the Boltzmann constant, as:
+This function simulates the total energy of an array of potential wells in thermal equilibrium with a reservoir at a specified temperature. The user can input parameters such as temperature (Ta), number of wells (N), well size (l), and maximum occupancy level (nmax). The function generates an array representing the average energy. Plotting and animation options (plot and live) are available but disabled in this context. The function internally calls Pot_energy to specify system parameters and compute the potential energy.
+
+The heat capacity (Cv) of the system can be calculated from its energy behavior in thermal equilibrium, where $k_b$ is the Boltzmann constant, as:
 
 $C_v=\frac{\left\langle E^2\right\rangle - \langle E\rangle^2}{k_b T^2}$.
-
-def Pot_energy(T, N, l, nmax, plot = False, live = False):
-    """
-    Perform a simulation to compute the potential energy of a system of infinite potential wells.
-
-    Parameters:
-        T (float): Temperature of the system.
-        N (int): Number of potential wells in the system.
-        l (float): Length of the wells.
-        nmax (int): Maximum level of occupancy for a well.
-        plot (bool): Whether to generate a plot of the simulation results.
-        live (bool): Whether to generate an animation of the distribution of energy states.
-
-    Returns:
-        tuple: A tuple containing the average energy and the heat capacity.
-    """
-    
 
 
 ### Seriall Approach Results - Graphics
