@@ -38,6 +38,7 @@ The heat capacity of a system can be computed from its energy behavior when it i
 
 $C_v=\frac{\left\langle E^2\right\rangle - \langle E\rangle^2}{k_b T^2}$.
 
-
+# Results - Graphics
+![00SERIALRESULTS](https://github.com/ASMarulanda/SerialMPIHotBoxes/assets/123122569/7c87ce1e-0009-42b5-b408-3cda69b97bb2)
 
 
