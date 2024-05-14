@@ -50,6 +50,7 @@ This graph depicts the total average energy of the system at equilibrium with th
 This visualization illustrates the heat capacity of the system at equilibrium for the temperature of the thermal bath for four distinct simulation runs. 
 
 The magic command %%time provides essential metrics for evaluating code performance. User Time reflects the total CPU time dedicated to executing user instructions, encompassing the code and function calls. System Time quantifies CPU time allocated to executing system-related tasks, such as handling inputs/outputs. Total Time aggregates User Time and System Time, offering a comprehensive measure of overall CPU time consumption. Wall Time represents the actual elapsed time from the start to the end of script execution, including waiting periods for resources and libraries.
+
 ![serialtimes](https://github.com/ASMarulanda/SerialMPIHotBoxes/assets/123122569/4c893418-8fa7-403c-a790-905994ce9f32)
 
 
