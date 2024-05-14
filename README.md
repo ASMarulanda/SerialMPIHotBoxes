@@ -8,7 +8,7 @@ The main objective of this project is to investigate the efficiency of the simul
 
 Traditionally, programming favored serial computation, where problems are tackled sequentially on a single processor. However, with growing computing demands, parallel computing has become crucial. It utilizes multiple processors to solve problems concurrently, dividing tasks into manageable parts executed simultaneously. This approach enhances performance and reduces execution time for large-scale computations. Effective coordination mechanisms ensure seamless collaboration among processors, optimizing overall efficiency.
 
-##  Monte Carlo-Metropolis Simulation 
+###  Monte Carlo-Metropolis Simulation 
 
 Monte Carlo simulations employ randomness and probabilistic sampling to tackle problems where deterministic solutions are challenging to obtain. A notable example is the Metropolis algorithm, widely utilized in statistical physics. This algorithm generates energy values consistent with a Maxwell-Boltzmann distribution to derive expected values for observables. It employs Markov Chain Monte Carlo (MCMC) at its core, exploring a system's phase space and sampling configurations based on their Boltzmann weights. By sequentially proposing changes and accepting or rejecting them probabilistically, MCMC ensures equilibrium is reached and samples configurations according to their equilibrium probabilities, adhering to detailed balance conditions. The likelihood of being in a particular state is determined by the system's energy and temperature.
 
@@ -35,12 +35,12 @@ Potential_reservoir(Ta, N, l, nmax, plot=False, live=False)
 This is the main function for the user, from it the user can obtain how is the behaviour of the system energy respect to the different parameters.
 
 
-## Heat Capacity 
+### Heat Capacity 
 The heat capacity of a system can be computed from its energy behavior when it is in thermal equilibrium, where $k_b$ is the Boltzmann constant, as:
 
 $C_v=\frac{\left\langle E^2\right\rangle - \langle E\rangle^2}{k_b T^2}$.
 
-## Seriall Approach Results - Graphics
+### Seriall Approach Results - Graphics
 
 ![00SERIALRESULTS](https://github.com/ASMarulanda/SerialMPIHotBoxes/assets/123122569/7c87ce1e-0009-42b5-b408-3cda69b97bb2)
 
