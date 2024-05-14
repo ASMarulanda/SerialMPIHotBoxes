@@ -54,5 +54,18 @@ The magic command %%time provides essential metrics for evaluating code performa
 ![serialtimes](https://github.com/ASMarulanda/SerialMPIHotBoxes/assets/123122569/4c893418-8fa7-403c-a790-905994ce9f32)
 
 
+#  Paralell Approach 
+
+Optimizing the performance of computing units is fundamental in parallel computing. Eliminating graphical processes, known for consuming substantial RAM, can enhance performance significantly. However, this adjustment may lead to differences in simulation output compared to previous versions. 
+The code utilizes MPI's distributed computing approach to distribute simulation runs among processes, each managing simulations for assigned temperatures independently. Results are stored locally and later compiled into a (.csv) file for analysis. This strategy primarily aims to reduce computing time compared to serial computation.
+
+On a cluster with 8 CPUs, each managing 4 simulation runs, the total computing time was notably reduced. Remarkably, results from parallel computation closely matched those from serial computation, accompanied by error bars.
+
+### Paralell Approach Results - Graphics
 
 
+![paral-energytemp](https://github.com/ASMarulanda/SerialMPIHotBoxes/assets/123122569/6123cd9e-d820-436f-8d5f-8e6b438df760)
+
+![paralel-CVANDTEMP](https://github.com/ASMarulanda/SerialMPIHotBoxes/assets/123122569/6ef9d168-7cca-464c-aa28-9104ff5428de)
+
+The linear progression of total energy with increasing temperature aligns with theoretical expectations, indicating the system's sensitivity to temperature variations. Additionally, the smooth curve observed in the heat capacity graph presents an averaged fit capturing the response of system particles to energy transitions between levels. This representation offers deeper insight into the system's dynamic behavior under varying temperature conditions, confirming the accuracy and reliability of the parallel simulation.
