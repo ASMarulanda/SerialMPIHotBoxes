@@ -1,4 +1,4 @@
-# Monte Carlo Simulation of Particle Distribution in Potential Wells with Thermal Reservoir
+# Paralell Adapting of Monte Carlo Simulation for Particle Distribution in Potential Wells with Thermal Reservoir
 
 We introduce a Monte Carlo-based simulation for analyzing the energy distribution of particles within an array of potential wells coupled with a thermal reservoir. The primary objective of this project is to assess the simulation's efficiency through both single-processor serial and parallel processing via SSH cluster connection. By parallelizing the algorithm, we aim to explore the advantages of parallel computing, particularly focusing on computational time and resource utilization. The final results encompass simultaneous runs illustrating the average energy behavior with increasing temperature, resembling the system's heat capacity results as well. 
 
